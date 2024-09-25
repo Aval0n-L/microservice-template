@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Raman Pakhomau",
+    "classifications": [ "Avalon", "Web", "Microservice" ],
+    "name": "Microservice Template Application",
+    "identity": "Avalon.MicroserviceTemplate",
+    "shortName": "avalonmicroservice",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "MicroserviceTemplate",
+    "preferNameDirectory": true,
+    "symbols": {
+        "service-name": {
+            "type": "parameter",
+            "datatype" : "string",
+            "description": "The service name for Kubernetes deployment (should be in lowercase 'dash delimited')",
+            "replaces": "service-name",
+            "isRequired": true,
+            "FileRename": "service-name"
+        }
+    },
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "exclude": [ "build/**/*", ".vs/**/*", ".vscode/**/*" ]
+                }
+            ]
+        }
+    ]
+}
